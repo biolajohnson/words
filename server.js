@@ -13,13 +13,13 @@ app.get("/", async (req, res) => {
       for (const w of data) {
         wordString += w;
       }
-      let newWordString = wordString.replace(".", ". ");
+      let newWordString = wordString.replace(".", "");
       const wordArray = newWordString.split("\n");
       let newWordArray;
       let wordGroup;
       let newArray = [];
       for (var i = 0; i < wordArray.length; i++) {
-        newWordArray = wordArray[i].replace(/[1-9][0-9]{0,2}|\. /g, "");
+        newWordArray = wordArray[i].replace(/[1-9][0-9]{0,2}/g, "");
         wordGroup = new Node(newWordArray);
         wordGroup.processing();
         newArray.push(wordGroup);

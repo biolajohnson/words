@@ -6,7 +6,8 @@ module.exports = class Node {
   }
 
   processing() {
-    const theProcess = this.stringDef.split(":");
+    const beforeProcess = this.stringDef.replace(".", "");
+    const theProcess = beforeProcess.split(":");
     this.title = theProcess[0];
     this.description = theProcess[1];
   }
