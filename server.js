@@ -4,7 +4,9 @@ const app = express();
 const fs = require("fs");
 const Node = require("./NodeClass");
 
-app.get("/", async (req, res) => {
+app.use(express.static("public"));
+
+app.get("/api", async (req, res) => {
   fs.readFile("./words.txt", "utf8", (err, data) => {
     if (err) {
       console.error(err);
@@ -24,7 +26,9 @@ app.get("/", async (req, res) => {
         wordGroup.processing();
         newArray.push(wordGroup);
       }
-      res.send(newArray);
+      let randomNumber = Math.floor(Math.random() * 1300);
+      console.log(randomNumber);
+      res.send(newArray[randomNumber]);
     }
   });
 });
