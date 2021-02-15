@@ -1,0 +1,47 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+body {
+  font-family: "Oswald", sans-serif;
+}
+
+.container {
+  background-color: rgb(250, 250, 250);
+  height: 100vh;
+  position: relative;
+}
+
+.container-word {
+  text-align: center;
+  border: 1px solid rgb(133, 133, 133);
+  margin: 0 auto;
+  width: 50%;
+  height: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 2px 9px black;
+  border-radius: 3px;
+}
+
+.word {
+  display: inline-block;
+  padding: 20% 0 20% 0;
+  margin: 0 auto;
+  font-weight: 300;
+  font-size: 3rem;
+}
+.word-syn {
+  display: block;
+  padding-top: 10%;
+  font-size: 2rem;
+  font-weight: 200;
+  border-top: 1px solid rgb(88, 88, 88);
+  width: 80%;
+  margin: 0 auto;
+}
