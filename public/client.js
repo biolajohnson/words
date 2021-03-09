@@ -1,5 +1,6 @@
 const word = document.getElementById("main-word");
 const definition = document.getElementById("definition");
+const btn = document.getElementById("btn");
 
 const getData = async () => {
   const response = await fetch("/api");
@@ -9,4 +10,5 @@ const getData = async () => {
   word.textContent = title;
   definition.textContent = description;
 };
-getData();
+
+btn.addEventListener("click", getData);

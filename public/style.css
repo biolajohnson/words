@@ -45,3 +45,11 @@ body {
   width: 80%;
   margin: 0 auto;
 }
+button {
+  font-size: 3em;
+  position: absolute;
+  bottom: 10%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: rgba(114, 177, 236, 0.89);
+}
